@@ -132,6 +132,24 @@ public class StringUtils {
 		return find;
 	}
 	
+	/**
+	 * 判断是否为数字且长度是否为11位
+	 * @param str
+	 * @return
+	 */
+	public static boolean judgeTelephoneIsOk(String src){
+		String regex = "^\\d{1,}$";
+		Pattern compile = Pattern.compile(regex);
+		Matcher matcher = compile.matcher(src);
+		boolean find = matcher.find();
+		if(find) {
+			String regex2 = "^(1)\\d{10}$";
+			boolean matches = src.matches(regex2);
+			return matches;
+		}
+		return false;
+		
+	}
 	
 	/**
 	 * 验证邮箱
@@ -143,4 +161,15 @@ public class StringUtils {
 		Matcher matcher = compile.matcher(str);
 		return matcher.matches();
 	}
+	
+	/**
+	 * 过滤String参数空格后判断是否有值
+	 */
+	public static boolean hasText(String str) {
+		
+		String trim = str.trim();
+		return trim!=null;
+	}
+	
+	
 }
