@@ -19,7 +19,35 @@
 //		int age = DateUtils.getAge(date);
 //		System.out.println(age);
 //	}
-//	
+//	//		@Test
+//		 {
+//			 List<String>	 byLines = FileUtils.readByLines("d:\\练习题目.txt");
+//			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+//			for (String string : byLines) {
+//				Car car = new Car();
+//				String[] carData = string.split("\\|");
+//				if(carData.length!=4) {
+//					System.out.println(" 数据 不合法  长度 " + string);
+//					continue;
+//				}
+//				
+//				// 车牌号
+//				car.setCarno(carData[0]);
+//				//
+//				try {
+//					car.setLongitude(Double.parseDouble(carData[1]));	
+//					car.setLatitude(Double.parseDouble(carData[2]));	
+//				} catch (NumberFormatException e) {
+//					// TODO: handle exception
+//					System.out.println("精度或维度不合法" +  string);
+//					continue;
+//				}
+//				car.setZptime(sdf.parse(carData[3]));
+//				car.setDistance(CalculateUtils.calBylw(car.getLongitude(), car.getLatitude(), 116.38, 39.90));
+////				service.add(car);
+//			}
+//		}
+		
 //	@Test
 //	public void testRemainDays() {
 //		
