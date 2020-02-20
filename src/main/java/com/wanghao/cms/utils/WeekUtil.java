@@ -4,7 +4,11 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-
+/**
+ * 传递的日期 判断是否符合单双号限行规则
+ * @author hp
+ *
+ */
 public class WeekUtil {
 	
 
